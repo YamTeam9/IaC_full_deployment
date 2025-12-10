@@ -8,9 +8,10 @@ variable "subscription_id" {
 } 
 variable "rg_name" { 
  type = string 
- default = "sandbox_farah.kacem" #modify accordingly
+ default = "sandbox_centralesupelec.team9" #modify accordingly
 } 
 variable "location" { 
  type  = string 
- default = "West Europe"
+ default = "France Central"
 } 
+
