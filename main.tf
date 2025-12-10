@@ -7,7 +7,7 @@ provider "azurerm" {
 
 # Create Storage Account 
 resource "azurerm_storage_account" "sg1" { 
- name      =  "storageaccount1iac" 
+ name      =  "storageteam9t1iac" 
  resource_group_name   =  var.rg_name
  location     =  var.location
  account_tier    =  "Standard" 
@@ -120,7 +120,7 @@ resource "azurerm_network_interface_security_group_association" "association1" {
 
 # Create Virtual Machine 
 resource  "azurerm_linux_virtual_machine" "vm3"  {  
-name     =  "vm3-iac"   
+name     =  "vm-team9-iac"   
 location    =  var.location 
 resource_group_name  =  var.rg_name  
 network_interface_ids  =  [ azurerm_network_interface.networki1.id ]  
@@ -149,7 +149,7 @@ os_disk  {
 
 # Create MySQL Server 
 resource "azurerm_mysql_flexible_server" "serverformation1" { 
- name    =  "serverformationiac" 
+ name    =  "serverformateam9iac" 
 location    =  var.location 
 resource_group_name  =  var.rg_name  
 administrator_login   =  "adminformation" 
@@ -189,4 +189,5 @@ resource "azurerm_mysql_flexible_server_firewall_rule" "mysqlfwrule1" {
  end_ip_address   =  "255.255.255.255" 
  depends_on = [ azurerm_mysql_flexible_server.serverformation1, 
  azurerm_mysql_flexible_database.mysqldb1 ] 
+
 } 
